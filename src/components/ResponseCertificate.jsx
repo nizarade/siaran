@@ -3,8 +3,7 @@ import { Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// WARNING: strictly for demo purposes only. Do not commit to public repo.
-const API_KEY = "AIzaSyDpRXEdZZ4B6kGDE4B8_dPOuzJ2jO0_nMg";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const DICTIONARY = {
   "banjir": "genangan air estetika",
@@ -93,7 +92,7 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
           
           setTimeout(() => {
             setProcessedText(newText);
-            setError("⚠️ Server AI sedang cuti bersama. Menggunakan jawaban manual (SOP Lama).");
+            setError("Server AI sedang cuti bersama. Menggunakan jawaban manual (SOP Lama).");
             onComplete();
             clearInterval(msgInterval);
           }, 3000);
@@ -109,7 +108,7 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
   }, [isProcessing, originalText, onComplete]);
 
   const handleForward = () => {
-    alert("⛔ GAGAL TERKIRIM. Kotak masuk dinas penuh sejak 2019.");
+    alert("GAGAL TERKIRIM. Kotak masuk dinas penuh sejak 2019.");
   };
 
   if (!originalText && !isProcessing && !processedText && !error) {
