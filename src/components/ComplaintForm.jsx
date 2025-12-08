@@ -11,18 +11,20 @@ const ComplaintForm = ({ onSubmit, isSubmitting }) => {
   };
 
   return (
-    <div className="bg-[#fdfbf7] p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative">
+    <div className="bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative">
       {/* Paper texture effect overlay */}
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/lined-paper.png')]"></div>
       
       <div className="relative z-10">
-        <h2 className="text-2xl font-serif font-bold mb-4 border-b-4 border-black pb-2 uppercase tracking-wide">
-          Formulir Pengaduan
+         <h2 
+          className="text-xl font-bold text-black uppercase tracking-wider [text-shadow:1px_1px_0px_theme(colors.paper-white)]"
+        >
+          FORMULIR ASPIRASI
         </h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label htmlFor="complaint" className="font-bold text-sm uppercase">
+            <label htmlFor="complaint" className="font-bold text-sm mt-2">
               Isi Keluhan Anda:
             </label>
             <textarea
@@ -39,7 +41,7 @@ const ComplaintForm = ({ onSubmit, isSubmitting }) => {
             type="submit"
             disabled={isSubmitting || !complaint.trim()}
             className={`
-              w-full py-4 px-6 text-xl font-bold uppercase tracking-wider border-4 border-black
+              w-full py-4 px-6 text-xl font-bold uppercase tracking-wider border-4 border-black bg-green-800
               transition-all transform
               ${isSubmitting || !complaint.trim() 
                 ? 'bg-gray-400 cursor-not-allowed opacity-50' 

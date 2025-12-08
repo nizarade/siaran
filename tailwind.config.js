@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'official-green': '#004d00',
+        'official-red': '##ed0000',
         'luxury-gold': '#facc15',
         'paper-white': '#f0f0f0',
         'cream': '#fffbeb',
