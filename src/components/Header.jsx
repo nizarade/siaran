@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Info, User } from 'lucide-react';
 import { motion } from 'framer-motion';
+import LogoSiaran from '../assets/logo.png'
 
 const Header = () => {
   const [date, setDate] = useState(new Date());
@@ -32,7 +33,7 @@ const Header = () => {
         
           <div>
             <div className="flex justify-center items-center">
-            <img className='size-20 mr-3' src="src\assets\logo.png" alt="Logo SIARAN" />
+            <img className='size-20 mr-3' src={LogoSiaran} alt="Logo SIARAN" />
             <h1 
             className="text-3xl flex  justify-center md:text-5xl font-bold text-putih tracking-wide uppercase"
             style={{ textShadow: "2px 2px 0px #facc15 " }}

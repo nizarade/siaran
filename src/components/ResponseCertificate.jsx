@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import LogoSiaran from '../assets/logo.png'
 
-// WARNING: strictly for demo purposes only. Do not commit to public repo.
-const API_KEY = "AIzaSyCEZQI6KMNdX90_ywaajfeCRIDIYIRFWak";
+
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const DICTIONARY = {
   banjir: "genangan air estetika",
@@ -162,7 +163,7 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
           <div className="text-center border-b-2 border-yellow-600 pb-4 mb-6">
             <div className="flex justify-center mb-2">
               <div className="w-16 h-16 bg-official-green rounded-full flex items-center justify-center text-3xl border-2 border-yellow-400">
-                <img src="src/assets/logo.png" alt="" />
+                <img src={LogoSiaran} alt="" />
               </div>
             </div>
             <h2 className="text-2xl font-serif font-bold text-official-green tracking-widest uppercase">
@@ -212,8 +213,8 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
 
                 <img
                   className="w-24 h-24 flex items-center justify-center mx-auto backdrop-blur-[1px]"
-                  src="src/assets/logo.png"
-                  alt=""
+                  src={LogoSiaran}
+                  alt="Stempel"
                 />
               </div>
 
