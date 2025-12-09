@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import ComplaintForm from "./components/ComplaintForm";
 import ResponseCertificate from "./components/ResponseCertificate";
 import Footer from "./components/Footer";
-import LogoSiaran from "./assets/logo.png"
+import LogoSiaran from "/logo.png"
 
 function App() {
   const [complaintText, setComplaintText] = useState("");
