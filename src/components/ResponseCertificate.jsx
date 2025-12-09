@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import LogoSiaran from '../assets/logo.png'
 
+<<<<<<< HEAD
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+=======
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;;
+>>>>>>> 795446781330912110c2c6bc2c3518a75e8a90ec
 
 const DICTIONARY = {
   banjir: "genangan air estetika",
@@ -20,13 +24,7 @@ const DICTIONARY = {
 };
 
 const LOADING_MESSAGES = [
-  "Menghubungi Humas...",
-  "Menyensor Fakta...",
-  "Memoles Dusta...",
-  "Finalisasi Dusta...",
-  "Mencari Kambing Hitam...",
-  "Menyiapkan Eufemisme...",
-  "Menghapus Jejak Digital...",
+  "Mendeteksi Kata Kasar...", "Menambahkan Bumbu Penjilat...", "Menghaluskan Fakta...", "Menyusun Diksi Birokrasi...", "Finalisasi Kesantunan..."
 ];
 
 const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
@@ -107,9 +105,7 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
 
           setTimeout(() => {
             setProcessedText(newText);
-            setError(
-              "Server AI sedang cuti bersama. Menggunakan jawaban manual (SOP Lama)."
-            );
+            setError(null);
             onComplete();
             clearInterval(msgInterval);
           }, 3000);
@@ -207,9 +203,6 @@ const ResponseCertificate = ({ originalText, isProcessing, onComplete }) => {
 
               {/* Stamp */}
               <div className="absolute top-8 left-0 right-0 opacity-80 transform -rotate-12 pointer-events-none">
-                {/* <div className="w-24 h-24 border-4 border-red-600 rounded-full flex items-center justify-center mx-auto text-red-600 font-bold text-xs uppercase p-2 text-center shadow-sm bg-red-50/50 backdrop-blur-[1px]">
-                  DITERIMA TAPI DIABAIKAN
-                </div> */}
 
                 <img
                   className="w-24 h-24 flex items-center justify-center mx-auto backdrop-blur-[1px]"
