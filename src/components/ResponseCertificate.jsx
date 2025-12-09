@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import LogoSiaran from '../assets/logo.png'
+import LogoSiaran from '/logo.png'
 
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;

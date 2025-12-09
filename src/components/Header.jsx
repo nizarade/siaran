@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Info, User } from 'lucide-react';
 import { motion } from 'framer-motion';
-import LogoSiaran from '../assets/logo.png'
+import LogoSiaran from '/logo.png'
 
 const Header = () => {
   const [date, setDate] = useState(new Date());
